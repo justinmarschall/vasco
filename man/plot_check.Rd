@@ -9,11 +9,14 @@ plot_check(plot_vars, n)
 \arguments{
 \item{plot_vars}{A vector of variables to be plotted.}
 
-\item{n}{Plot threshold.  Function will fail if length(plot_vars) > n.}
+\item{n}{Plot threshold as set in plot_*() function.}
 }
 \value{
 
 }
 \description{
 A helper function to avoid plotting more than you'd prefer.
+}
+\details{
+Function will fail if length(plot_vars) > n.
 }

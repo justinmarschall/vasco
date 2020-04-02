@@ -4,7 +4,7 @@
 \alias{plot_histogram}
 \title{Plot Histogram}
 \usage{
-plot_histogram(df, n_bins = 30, n = 50)
+plot_histogram(df, n_bins = 30, n = 50, ...)
 }
 \arguments{
 \item{df}{A data frame.}
@@ -12,6 +12,8 @@ plot_histogram(df, n_bins = 30, n = 50)
 \item{n_bins}{Number of bins to pass to geom_histogram().  Defaults to 30.}
 
 \item{n}{Threshold for number of plots passed to plot_check().  Defaults to 50.}
+
+\item{...}{Optional arguments passed to geom_histogram().}
 }
 \value{
 

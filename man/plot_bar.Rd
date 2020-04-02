@@ -10,6 +10,8 @@ plot_bar(df, n = 50)
 \item{df}{A data frame.}
 
 \item{n}{Threshold for number of plots passed to plot_check().  Defaults to 50.}
+
+\item{...}{Optional arguments passed to geom_bar().}
 }
 \value{
 

@@ -4,12 +4,14 @@
 \alias{plot_density}
 \title{Plot Density}
 \usage{
-plot_density(df, n = 50)
+plot_density(df, n = 50, ...)
 }
 \arguments{
 \item{df}{A data frame.}
 
 \item{n}{Threshold for number of plots passed to plot_check().  Defaults to 50.}
+
+\item{...}{Optional arguments passed to geom_density().}
 }
 \value{
 
