@@ -11,11 +11,11 @@ An R package for exploring your data.
 There are four main functions in the vasco library:
 
 + Plotting numeric variables
-    + plot_density()
-    + plot_histogram()
-    + plot_scatter()
+    + `plot_density()`
+    + `plot_histogram()`
+    + `plot_scatter()`
 + Plotting categorical variables
-    + plot_bar()
+    + `plot_bar()`
 
 Each function works in the same way--pass a data frame to the function, and `vasco` will return *n* plots, given the number of numeric or categorical variables.  For data frames with greater than 50 variables, pass parameter `n` to override the `plot_check()` helper function.  It's recommended to write many plots to PDF to improve readability.
 
