@@ -11,12 +11,17 @@ plot_histogram(df, n_bins = 30, n = 50, ...)
 
 \item{n_bins}{Number of bins to pass to geom_histogram().  Defaults to 30.}
 
-\item{n}{Threshold for number of plots passed to plot_check().  Defaults to 50.}
+\item{n}{Threshold for max number of plots.  Defaults to 50.}
 
 \item{...}{Optional arguments passed to geom_histogram().}
 }
 \description{
 Plot a histogram distribution for all numeric variables.
+}
+\details{
+The argument n sets the max number of plots allowed by the plotting function.
+This is done to prevent producing a large number of plots by accident.
+Change this value to override the default of 50.
 }
 \examples{
 plot_histogram(iris)

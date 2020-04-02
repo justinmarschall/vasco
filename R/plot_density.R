@@ -3,8 +3,12 @@
 #' Plot a density distribution for all numeric variables.
 #'
 #' @param df A data frame.
-#' @param n Threshold for number of plots passed to plot_check().  Defaults to 50.
+#' @param n Threshold for max number of plots.  Defaults to 50.
 #' @param ... Optional arguments passed to geom_density().
+#'
+#' @details The argument n sets the max number of plots allowed by the plotting function.
+#' This is done to prevent producing a large number of plots by accident.
+#' Change this value to override the default of 50.
 #'
 #' @export
 #'

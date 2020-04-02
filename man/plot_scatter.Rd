@@ -11,7 +11,7 @@ plot_scatter(df, plot_reduce = TRUE, n = 50, ...)
 
 \item{plot_reduce}{Boolean.  Deduplicate variable list before plotting?  Defaults to TRUE.  See Details below for more information.}
 
-\item{n}{Threshold for number of plots passed to plot_check().  Defaults to 50.}
+\item{n}{Threshold for max number of plots.  Defaults to 50.}
 
 \item{...}{Optional arguments passed to geom_point().}
 }
@@ -19,7 +19,12 @@ plot_scatter(df, plot_reduce = TRUE, n = 50, ...)
 Scatter plots for all combinations of numeric variables.
 }
 \details{
-The plot_reduce argument serves to deduplicate the variables plotted by plot_scatter().  For instance, when set to TRUE (default), plot_scatter() will return the (x, y) plot, but not (y, x).  This is determined alphabetically.  In no case will the (x, x) plot be produced.
+The plot_reduce argument serves to deduplicate the variables plotted by plot_scatter().
+For instance, when set to TRUE (default), plot_scatter() will return the (x, y) plot, but not (y, x).
+This is determined alphabetically.  In no case will the (x, x) plot be produced.
+
+The argument n sets the max number of plots allowed by the plotting function.  This is done to prevent producing a large number of plots by accident.
+Change this value to override the default of 50.
 }
 \examples{
 plot_scatter(iris)

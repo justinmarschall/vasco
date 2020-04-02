@@ -4,10 +4,15 @@
 #'
 #' @param df A data frame.
 #' @param plot_reduce Boolean.  Deduplicate variable list before plotting?  Defaults to TRUE.  See Details below for more information.
-#' @param n Threshold for number of plots passed to plot_check().  Defaults to 50.
+#' @param n Threshold for max number of plots.  Defaults to 50.
 #' @param ... Optional arguments passed to geom_point().
 #'
-#' @details The plot_reduce argument serves to deduplicate the variables plotted by plot_scatter().  For instance, when set to TRUE (default), plot_scatter() will return the (x, y) plot, but not (y, x).  This is determined alphabetically.  In no case will the (x, x) plot be produced.
+#' @details The plot_reduce argument serves to deduplicate the variables plotted by plot_scatter().
+#' For instance, when set to TRUE (default), plot_scatter() will return the (x, y) plot, but not (y, x).
+#' This is determined alphabetically.  In no case will the (x, x) plot be produced.
+#'
+#' The argument n sets the max number of plots allowed by the plotting function.  This is done to prevent producing a large number of plots by accident.
+#' Change this value to override the default of 50.
 #'
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data

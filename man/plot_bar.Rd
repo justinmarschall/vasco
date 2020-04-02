@@ -9,12 +9,17 @@ plot_bar(df, n = 50, ...)
 \arguments{
 \item{df}{A data frame.}
 
-\item{n}{Threshold for number of plots passed to plot_check().  Defaults to 50.}
+\item{n}{Threshold for max number of plots.  Defaults to 50.}
 
 \item{...}{Optional arguments passed to geom_bar().}
 }
 \description{
 Plot a distribution for all categorical variables.
+}
+\details{
+The argument n sets the max number of plots allowed by the plotting function.
+This is done to prevent producing a large number of plots by accident.
+Change this value to override the default of 50.
 }
 \examples{
 plot_bar(iris)
