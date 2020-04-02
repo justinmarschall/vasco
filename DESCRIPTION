@@ -1,14 +1,21 @@
 Package: vasco
-Title: What the Package Does (One Line, Title Case)
+Title: An R Package for Exploring Your Data
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Justin",
+           family = "Marschall",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "justin.c.marschall@gmail.com")
+Description: vasco leverages purrr and ggplot2 to iterate through an entire data frame, producing plots for all variables of a given type.
+License: MIT + file LICENSE
+Depends: 
+    R (>= 3.2.0)
+Imports:
+    dplyr,
+    ggplot2,
+    magrittr,
+    purrr,
+    rlang
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0

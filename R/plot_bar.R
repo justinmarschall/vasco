@@ -6,12 +6,11 @@
 #' @param n Threshold for number of plots passed to plot_check().  Defaults to 50.
 #' @param ... Optional arguments passed to geom_bar().
 #'
-#' @return
 #' @export
 #'
 #' @examples
 #' plot_bar(iris)
-plot_bar <- function(df, n = 50) {
+plot_bar <- function(df, n = 50, ...) {
   plot_vars <- get_categorical_vars(df)
 
   plot_check(plot_vars, n)

@@ -7,7 +7,6 @@
 #' @param n Threshold for number of plots passed to plot_check().  Defaults to 50.
 #' @param ... Optional arguments passed to geom_histogram().
 #'
-#' @return
 #' @export
 #'
 #' @examples

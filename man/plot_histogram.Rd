@@ -15,9 +15,6 @@ plot_histogram(df, n_bins = 30, n = 50, ...)
 
 \item{...}{Optional arguments passed to geom_histogram().}
 }
-\value{
-
-}
 \description{
 Plot a histogram distribution for all numeric variables.
 }

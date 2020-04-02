@@ -15,9 +15,6 @@ plot_scatter(df, plot_reduce = TRUE, n = 50, ...)
 
 \item{...}{Optional arguments passed to geom_point().}
 }
-\value{
-
-}
 \description{
 Scatter plots for all combinations of numeric variables.
 }

@@ -9,7 +9,9 @@
 #'
 #' @details The plot_reduce argument serves to deduplicate the variables plotted by plot_scatter().  For instance, when set to TRUE (default), plot_scatter() will return the (x, y) plot, but not (y, x).  This is determined alphabetically.  In no case will the (x, x) plot be produced.
 #'
-#' @return
+#' @importFrom magrittr %>%
+#' @importFrom rlang .data
+#'
 #' @export
 #'
 #' @examples
@@ -22,28 +24,28 @@ plot_scatter <- function(df, plot_reduce = TRUE, n = 50, ...) {
   if(plot_reduce) {
     plot_vars <-
       expand.grid(plot_vars, plot_vars) %>%
-      dplyr::mutate(Var1 = as.character(Var1),
-                    Var2 = as.character(Var2),
-                    check = Var1 == Var2,
-                    min = pmin(Var1, Var2),
-                    max = pmax(Var1, Var2),
-                    combine_vars = paste(min, max),
-                    dup = duplicated(combine_vars)) %>%
-      dplyr::filter(check != TRUE,
-                    dup != TRUE) %>%
-      dplyr::select(min, max) %>%
-      dplyr::rename(var1 = min,
-                    var2 = max)
+      dplyr::mutate(Var1 = as.character(.data$Var1),
+                    Var2 = as.character(.data$Var2),
+                    check = .data$Var1 == .data$Var2,
+                    min = pmin(.data$Var1, .data$Var2),
+                    max = pmax(.data$Var1, .data$Var2),
+                    combine_vars = paste(.data$min, .data$max),
+                    dup = duplicated(.data$combine_vars)) %>%
+      dplyr::filter(.data$check != TRUE,
+                    .data$dup != TRUE) %>%
+      dplyr::select(.data$min, .data$max) %>%
+      dplyr::rename(var1 = .data$min,
+                    var2 = .data$max)
 
   } else {
     plot_vars <-
       expand.grid(plot_vars, plot_vars) %>%
-      dplyr::mutate(Var1 = as.character(Var1),
-                    Var2 = as.character(Var2),
-                    check = Var1 == Var2) %>%
-      dplyr::filter(check != TRUE) %>%
-      dplyr::rename(var1 = Var1,
-                    var2 = Var2)
+      dplyr::mutate(Var1 = as.character(.data$Var1),
+                    Var2 = as.character(.data$Var2),
+                    check = .data$Var1 == .data$Var2) %>%
+      dplyr::filter(.data$check != TRUE) %>%
+      dplyr::rename(var1 = .data$Var1,
+                    var2 = .data$Var2)
 
   }
 

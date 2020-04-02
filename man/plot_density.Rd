@@ -13,9 +13,6 @@ plot_density(df, n = 50, ...)
 
 \item{...}{Optional arguments passed to geom_density().}
 }
-\value{
-
-}
 \description{
 Plot a density distribution for all numeric variables.
 }

@@ -4,7 +4,7 @@
 \alias{plot_bar}
 \title{Plot Bar}
 \usage{
-plot_bar(df, n = 50)
+plot_bar(df, n = 50, ...)
 }
 \arguments{
 \item{df}{A data frame.}
@@ -12,9 +12,6 @@ plot_bar(df, n = 50)
 \item{n}{Threshold for number of plots passed to plot_check().  Defaults to 50.}
 
 \item{...}{Optional arguments passed to geom_bar().}
-}
-\value{
-
 }
 \description{
 Plot a distribution for all categorical variables.
