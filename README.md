@@ -54,3 +54,6 @@ purrr::map_dfc(1:60, rnorm, n = 100, sd = 1) %>%
 dev.off()
 ```
 
+## Example
+
+![](example_1.mov)
