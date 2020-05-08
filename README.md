@@ -2,6 +2,12 @@
 
 An R package for exploring your data.
 
+## Installation
+
+```R
+devtools::install_github("justinmarschall/vasco")
+```
+
 ## Purpose
 
 `vasco` leverages [`purrr`](https://purrr.tidyverse.org/) and [`ggplot2`](https://ggplot2.tidyverse.org/) to iterate through an entire data frame, producing plots for *all* variables of a given type.
